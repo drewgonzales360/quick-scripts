@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraSwitcher : MonoBehaviour
 {
+    // Make sure these are virual cameras.
     [SerializeField] public GameObject cameraZero;
     [SerializeField] public GameObject cameraOne;
     private int currentCamera = 0;
