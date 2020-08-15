@@ -1,0 +1,6 @@
+#!/bin/bash
+set -o errexit
+set -o nounset
+
+BRANCH="${1:-master}"
+git --no-pager diff --name-only "${BRANCH}" | fzf --reverse -m --height=100 --preview-window=down:30 --preview="git diff ${BRANCH} {1}"
